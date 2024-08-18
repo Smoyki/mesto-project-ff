@@ -4,7 +4,7 @@ const cardTemplate = document.querySelector('#card-template');
 
 // @todo: DOM узлы
 
-const placesList = document.querySelector('.places__list');
+const  = document.querySelector('.places__list');
 // @todo: Функция создания карточки
 function createCard (cardTemplate, element) { 
 
@@ -47,6 +47,6 @@ initialCards.forEach(element => {
 
     const cardElement = createCard(cardTemplate, element); 
 
-    placesList.append(cardElement); 
+    places_list.append(cardElement); 
 
 });

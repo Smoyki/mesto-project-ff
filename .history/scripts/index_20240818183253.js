@@ -47,6 +47,6 @@ initialCards.forEach(element => {
 
     const cardElement = createCard(cardTemplate, element); 
 
-    placesList.append(cardElement); 
+    plac.append(cardElement); 
 
 });
