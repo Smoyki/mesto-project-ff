@@ -93,7 +93,7 @@ function popupSmoothly(evt){
  
  
 buttonAdd.addEventListener('click', () => { 
-    openPopup(popupNewCard); 
+    openModal(popupNewCard); 
 }); 
  
 popupOpenEditButton.addEventListener('click', () => { 
@@ -101,7 +101,7 @@ popupOpenEditButton.addEventListener('click', () => {
     nameInput.value = profileName.textContent;  
     jobInput.value = profileDescription.textContent;  
  
-    openPopup(popupContentEdit) }); 
+    openModal(popupContentEdit) }); 
  
 //закрывает через крестик 
 popups.forEach((popup) => { 

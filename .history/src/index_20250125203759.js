@@ -1,7 +1,7 @@
 import './index.css'; 
 import { initialCards } from "./components/cards.js"; 
 import { openPopup, closePopup } from './components/modal.js'; 
-import { likeCard } from './components/card.js'; 
+import { createCard } from './components/card.js'; 
 import { createCard, deleteCard } from './components/card.js'; 
 
 // Переменные для работы с DOM 
@@ -34,7 +34,7 @@ function openModalImage(evt) {
 } 
 // @todo: Вывести карточки на страницу 
 initialCards.forEach(function(item) { 
-    const itemCard = createCard(item, deleteCard, likeCard, openModalImage); 
+    const itemCard = createCard(item, deleteCard, createCard, openModalImage); 
     placesList.append(itemCard); 
 }); 
  
@@ -61,7 +61,7 @@ function handlePlacesFormSubmit(evt){
         name: placeValue, 
         link: imageValue 
     }; 
-    const createNewCard = createCard(newCard, deleteCard, likeCard, openModalImage); 
+    const createNewCard = createCard(newCard, deleteCard, createCard, openModalImage); 
     placesList.prepend(createNewCard); 
     clearForm(formNewPlace); 
     closePopup(popupTypeNewCard); 

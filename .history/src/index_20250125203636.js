@@ -101,7 +101,7 @@ popupOpenEditButton.addEventListener('click', () => {
     nameInput.value = profileName.textContent;  
     jobInput.value = profileDescription.textContent;  
  
-    openPopup(popupContentEdit) }); 
+    openModal(popupContentEdit) }); 
  
 //закрывает через крестик 
 popups.forEach((popup) => { 

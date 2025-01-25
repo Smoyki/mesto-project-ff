@@ -1,7 +1,7 @@
 import './index.css'; 
 import { initialCards } from "./components/cards.js"; 
 import { openPopup, closePopup } from './components/modal.js'; 
-import { likeCard } from './components/card.js'; 
+import { createCard } from './components/card.js'; 
 import { createCard, deleteCard } from './components/card.js'; 
 
 // Переменные для работы с DOM 

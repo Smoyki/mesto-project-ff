@@ -1,6 +1,6 @@
 import './index.css'; 
 import { initialCards } from "./components/cards.js"; 
-import { openPopup, closePopup } from './components/modal.js'; 
+import { openModal, closePopup } from './components/modal.js'; 
 import { likeCard } from './components/card.js'; 
 import { createCard, deleteCard } from './components/card.js'; 
 
@@ -27,7 +27,7 @@ const formEditProfile = document.querySelector('[name="edit-profile"]');
  
 // @todo: Функция создания карточки 
 function openModalImage(evt) {  
-    openPopup (popupCardImg); 
+    openModal (popupCardImg); 
     popupImage.src = evt.target.src;  
     popupCaption.textContent = evt.target.alt;  
     popupImage.textContent = evt.target.alt; 
@@ -75,7 +75,7 @@ formNewPlace.addEventListener('submit', (evt) =>{
     postNewCard(placeInpit.value, urlInput.value)
     .then((res) =>{
         cardContainer.prepend(
-            createCard(res, deleteCard, likeCard, openPopup, res.owner)
+            createCard(res, deleteCard, likeCard, openModal, res.owner)
         );
         formNewPlace.reset();
         closePopup(popupTypeNewCard);
@@ -93,7 +93,7 @@ function popupSmoothly(evt){
  
  
 buttonAdd.addEventListener('click', () => { 
-    openPopup(popupNewCard); 
+    openModal(popupNewCard); 
 }); 
  
 popupOpenEditButton.addEventListener('click', () => { 
@@ -101,7 +101,7 @@ popupOpenEditButton.addEventListener('click', () => {
     nameInput.value = profileName.textContent;  
     jobInput.value = profileDescription.textContent;  
  
-    openPopup(popupContentEdit) }); 
+    openModal(popupContentEdit) }); 
  
 //закрывает через крестик 
 popups.forEach((popup) => { 
